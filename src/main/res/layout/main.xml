@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:text="Configure your device as ROS Master or ROS Client" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:id="@+id/radiogroup"
+        android:layout_height="95dp"
+        android:layout_below="@id/textView2">
+
+    <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" android:id="@+id/rosmaster"
+            android:checked="false"
+            android:text="ROS Master" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:id="@+id/rosclient"
+            android:text="ROS Client" />
+    </RadioGroup>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radiogroup"
+        android:id="@+id/mastercont"
+        android:paddingLeft="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Provide ROS Master details to connect"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:id="@+id/textView3" />
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView3"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/ipAddressTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="IP address :"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+                <EditText
+                    android:layout_weight="2.5"
+                    android:id="@+id/MasterUri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Enter Master IP address"
+                    android:digits="0123456789."
+                    />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@id/linear"
+            android:layout_alignParentLeft="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:id="@+id/porttextview"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"
+                android:text="Port number : " />
+            <EditText
+                android:id="@+id/MasterPort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:ems="10"
+                android:text="11311"
+                android:inputType="number" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_below="@id/mastercont"
+        android:id="@+id/createorconnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
