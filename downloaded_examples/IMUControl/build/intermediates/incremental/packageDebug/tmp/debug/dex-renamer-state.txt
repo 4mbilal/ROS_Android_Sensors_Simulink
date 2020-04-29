@@ -1,4 +1,0 @@
-#Mon Apr 06 00:57:09 AST 2020
-base.0=D\:\\RnD\\Frameworks\\Android\\Simulink_Experiments\\IMUControl\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-path.0=classes.dex
-renamed.0=classes.dex
