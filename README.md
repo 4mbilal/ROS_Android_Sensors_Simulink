@@ -1,15 +1,15 @@
 # ROS_Android_Sensors_Simulink
-Implementation of a ROS node on Android for all the commonly available sensors. Derived from Simulink example
+Implementation of a ROS node on Android to publish sensor and odometry messages. It publishes the following topics:  
+/android/imu  
+/android/gps  
+/android/mag  
+/android/temp  
+/android/pressure  
+/android/odom  
 
-Mathworks has provided an example to create a ROS node for Android platform in Simulink. The example, however, publishes only IMU data (Accelerometer, Gyro and Orientation).
-https://uk.mathworks.com/help/supportpkg/android/examples/visualize-sensor-data-from-an-android-device-in-rviz-example.html
-This is an extension of this example to access all the commonly avaailable sensors on Smartphones i.e. IMU, GPS, Magnetometer, Pressure and Temperature.
-It publishes the following topics:
+Originally dervied from a Simulink example which published only IMU data (Accelerometer, Gyro and Orientation).  
+https://uk.mathworks.com/help/supportpkg/android/examples/visualize-sensor-data-from-an-android-device-in-rviz-example.html  
+This version extends the support to all the commonly avaailable sensors on Smartphones i.e. IMU, GPS, Magnetometer, Pressure and Temperature.
 
-/android/imu
-/android/gps
-/android/mag
-/android/temp
-android/pressure
-
+The latest version also implements fusion of Orientation and Gyroscope sensors using Complementary Filter. A rough implementation of double integration of Linear Acceleration to generate dead-reckoning data is also implemented. This is, however, far from being accurate and should serve only as a reference. Anyone interested in extending the project to include Kalman Filtering, please contact me at 4mbilal@gmail.com.    
 IMU is published at a rate of 100 Hz while all others at 1 Hz. The Simulink model 'ROS_Android_Sensors.slx' can be used to update the code.
