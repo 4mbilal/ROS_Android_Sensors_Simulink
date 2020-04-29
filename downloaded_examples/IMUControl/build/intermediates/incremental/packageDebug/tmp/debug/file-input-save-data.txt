@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Mon Apr 06 00:57:09 AST 2020
+1.base=D\:\\RnD\\Frameworks\\Android\\Simulink_Experiments\\IMUControl\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=lib/armeabi-v7a/libIMUControl.so
+0.set=NATIVE_RESOURCE
+0.base=D\:\\RnD\\Frameworks\\Android\\Simulink_Experiments\\IMUControl\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
+1.path=classes.dex

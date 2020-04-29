@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Wed Apr 29 07:58:17 AST 2020
+1.base=D\:\\RnD\\Frameworks\\Android\\Simulink\\ROS_Sensor_Fusion\\Android_Studio_Prj\\ROS_Android_Sensors\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=NATIVE_RESOURCE
+0.path=classes.dex
+0.set=DEX
+0.base=D\:\\RnD\\Frameworks\\Android\\Simulink\\ROS_Sensor_Fusion\\Android_Studio_Prj\\ROS_Android_Sensors\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+1.path=lib/armeabi-v7a/libROS_Android_Sensors.so

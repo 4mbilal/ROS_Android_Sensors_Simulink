@@ -13,6 +13,3 @@ It publishes the following topics:
 android/pressure
 
 IMU is published at a rate of 100 Hz while all others at 1 Hz. The Simulink model 'ROS_Android_Sensors.slx' can be used to update the code.
-
-
-https://sites.google.com/view/4mbilal/

@@ -1,0 +1,68 @@
+buildscript {
+    apply from: "https://github.com/rosjava/android_core/raw/kinetic/buildscript.gradle"
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.0'
+    }
+}
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+    apply plugin: 'ros-android'
+
+    afterEvaluate { project ->
+        android {
+            // Exclude a few files that are duplicated across our dependencies and
+            // prevent packaging Android applications.
+            packagingOptions {
+                exclude "META-INF/LICENSE.txt"
+                exclude "META-INF/NOTICE.txt"
+            }
+        }
+    }
+}
+
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        minSdkVersion 14
+    }
+
+    sourceSets.main {
+        jni.srcDirs=[]
+        jniLibs.srcDir 'src/main/libs'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+    aaptOptions {
+        cruncherEnabled = false
+    }
+}
+
+dependencies  {
+    implementation 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    implementation 'com.android.support:design:26.0.0-alpha1'
+    implementation 'org.ros.android_core:android_10:[0.3,0.4)'
+    implementation "org.ros.rosjava_messages:diagnostic_msgs:[1.12,1.13)"
+    implementation "org.ros.rosjava_messages:sensor_msgs:[1.12,1.13)"
+    implementation "org.ros.rosjava_core:rosjava:[0.3.2,0.4)"
+    implementation 'org.ros.rosjava_core:rosjava_geometry:[0.3,0.4)'
+    implementation 'org.ros.rosjava_messages:visualization_msgs:[1.12,1.13)'
+}
+
+dependencies  {
+    implementation fileTree(dir: 'libs', include: '*.jar')
+}
